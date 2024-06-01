@@ -112,6 +112,7 @@
 			isa = PBXGroup;
 			children = (
 				91D57BBE2BEA19B90087E7C1 /* Feed Feature */,
+				E881DCCC2BEFA38400212ED9 /* Feed API */,
 				910F38562BE8D17000BD5199 /* AppDelegate.swift */,
 				910F38582BE8D17000BD5199 /* SceneDelegate.swift */,
 				910F385A2BE8D17000BD5199 /* ViewController.swift */,
@@ -127,7 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				910F386D2BE8D17100BD5199 /* MyFeedTests.swift */,
-				91D57BC52BEA1C970087E7C1 /* RemoteFeedLoaderTests.swift */,
+				91E400242C09AD1E005A861E /* Feed API */,
 			);
 			path = MyFeedTests;
 			sourceTree = "<group>";
@@ -144,11 +145,18 @@
 		91D57BBE2BEA19B90087E7C1 /* Feed Feature */ = {
 			isa = PBXGroup;
 			children = (
-				E881DCCC2BEFA38400212ED9 /* Feed API */,
 				91D57BBF2BEA19E50087E7C1 /* FeedItem.swift */,
 				91D57BC12BEA19FA0087E7C1 /* FeedLoader.swift */,
 			);
 			path = "Feed Feature";
+			sourceTree = "<group>";
+		};
+		91E400242C09AD1E005A861E /* Feed API */ = {
+			isa = PBXGroup;
+			children = (
+				91D57BC52BEA1C970087E7C1 /* RemoteFeedLoaderTests.swift */,
+			);
+			path = "Feed API";
 			sourceTree = "<group>";
 		};
 		E881DCCC2BEFA38400212ED9 /* Feed API */ = {
