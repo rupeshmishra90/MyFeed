@@ -22,6 +22,7 @@
 		E881DCCE2BEFA3B000212ED9 /* RemoteFeedLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E881DCCD2BEFA3B000212ED9 /* RemoteFeedLoader.swift */; };
 		E8946AAA2C06555A00E0B7C5 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8946AA92C06555A00E0B7C5 /* HTTPClient.swift */; };
 		E8946AAC2C0658FB00E0B7C5 /* FeedItemsMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8946AAB2C0658FB00E0B7C5 /* FeedItemsMapper.swift */; };
+		E8B10E252C11279900AA86D2 /* URLSessionHTTPClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8B10E242C11279900AA86D2 /* URLSessionHTTPClientTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		E881DCCD2BEFA3B000212ED9 /* RemoteFeedLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteFeedLoader.swift; sourceTree = "<group>"; };
 		E8946AA92C06555A00E0B7C5 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
 		E8946AAB2C0658FB00E0B7C5 /* FeedItemsMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsMapper.swift; sourceTree = "<group>"; };
+		E8B10E242C11279900AA86D2 /* URLSessionHTTPClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionHTTPClientTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				91D57BC52BEA1C970087E7C1 /* RemoteFeedLoaderTests.swift */,
+				E8B10E242C11279900AA86D2 /* URLSessionHTTPClientTests.swift */,
 			);
 			path = "Feed API";
 			sourceTree = "<group>";
@@ -316,6 +319,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				91D57BC62BEA1C970087E7C1 /* RemoteFeedLoaderTests.swift in Sources */,
+				E8B10E252C11279900AA86D2 /* URLSessionHTTPClientTests.swift in Sources */,
 				910F386E2BE8D17100BD5199 /* MyFeedTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
