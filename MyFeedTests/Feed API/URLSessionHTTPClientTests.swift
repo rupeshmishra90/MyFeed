@@ -17,7 +17,7 @@ class URLSessionHTTPClient{
     func get(from url: URL){
         session.dataTask(with: url) { _, _, _ in
             
-        }
+        }.resume()
     }
 }
 
@@ -31,18 +31,42 @@ func test_getFromURL_createsDataTakWithURL()
         sut.get(from: url)
         XCTAssertEqual(session.receivedURLs, [url])
     }
+    func test_getFromURL_resumesDataTakWithURL()
+        {
+            let url = URL(string: "https://any-url.com")!
+            let session = URLSessionSpy()
+            let task = FakeURLSessionDataTaskSpy()
+            session.stub(url:  url, task: task)
+            let sut = URLSessionHTTPClient(session: session)
+            sut.get(from: url)
+            XCTAssertEqual(task.resumeCallCount, 1)
+        }
 
     
     //MARK: - Helpers
     private class URLSessionSpy: URLSession{
         var receivedURLs = [URL]()
+        private var stub = [URL: URLSessionDataTask]()
+        
+        func stub(url: URL, task: URLSessionDataTask)
+        {
+            stub[url] = task
+        }
+        
         override func dataTask(with url: URL, completionHandler: @escaping (Data?, URLResponse?, (any Error)?) -> Void) -> URLSessionDataTask {
             receivedURLs.append(url)
-            return FakeURLSessionDataTask()
+            return stub[url] ?? FakeURLSessionDataTask()
         }
     }
     
     private class FakeURLSessionDataTask: URLSessionDataTask{
-        
+        override func resume() {
+        }
+    }
+    private class FakeURLSessionDataTaskSpy: URLSessionDataTask{
+        var resumeCallCount = 0
+        override func resume() {
+            resumeCallCount += 1
+        }
     }
 }
